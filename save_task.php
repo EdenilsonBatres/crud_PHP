@@ -12,5 +12,10 @@ $result =  mysqli_query($con, $query);
 if(!$result){
     die("query fail");
 }
-echo "guardado";
+//echo "guardado";
+$_SESSION['message'] = 'task saved';
+$_SESSION['message_type'] = 'success';
+
+header("location: index.php");//redirecciona al index nuevamente
+
 }
